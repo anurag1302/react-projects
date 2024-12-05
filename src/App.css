@@ -12,3 +12,19 @@ button {
   font-size: large;
   cursor: pointer;
 }
+
+.game-grid {
+  width: 1000px;
+  margin-left: 300px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+}
+.game-item {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
