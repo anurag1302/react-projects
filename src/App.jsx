@@ -1,6 +1,4 @@
 import { useState } from "react";
-import jerry from "./assets/images/jerry.png";
-
 import "./App.css";
 
 const characters = [
@@ -31,12 +29,19 @@ const characters = [
 ];
 
 function App() {
-  const characterMatrix = [...characters, ...characters];
-  console.log(characterMatrix);
+  const [characterMatrix, setCharacterMatrix] = useState([]);
+
+  const handleButtonClick = () => {
+    let charMatrix = [...characters, ...characters].sort(() => {
+      return Math.random() - 0.5;
+    });
+    setCharacterMatrix(charMatrix);
+  };
+
   return (
     <>
       <h1>Welcome to Card Memory Game</h1>
-      <button>New Game</button>
+      <button onClick={handleButtonClick}>New Game</button>
 
       <div className="game-grid">
         {characterMatrix.map((character) => {
