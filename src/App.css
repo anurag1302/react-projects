@@ -4,4 +4,11 @@
   height: 80px;
   text-align: center;
   background-color: grey;
+  cursor: pointer;
+}
+
+.answer {
+  text-align: center;
+  width: 200px;
+  background-color: lightgrey;
 }

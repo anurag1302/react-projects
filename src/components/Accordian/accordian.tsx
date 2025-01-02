@@ -2,11 +2,11 @@ import { useState } from "react";
 import accData from "./data";
 
 function Accordian() {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState("");
 
-  function handleSingleClick(currentId: number) {
+  function handleSingleClick(currentId: string) {
     console.log(currentId);
-    setSelected(currentId);
+    setSelected(currentId == selected ? "" : currentId);
   }
   return (
     <>
@@ -24,7 +24,9 @@ function Accordian() {
                   <p>{item.question}</p>
                   <span>+</span>
                 </div>
-                {selected == item.id ? <div>{item.answer}</div> : null}
+                <div className="answer">
+                  {selected == item.id ? <div>{item.answer}</div> : ""}
+                </div>
               </div>
             ))}
           </div>
