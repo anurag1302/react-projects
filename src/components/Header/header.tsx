@@ -8,6 +8,7 @@ function Header() {
         <Link to="/">Home</Link>
         <Link to="/accordian">Accordian</Link>
         <Link to="/color-picker">Color Picker</Link>
+        <Link to="/rating">Star Rating</Link>
       </div>
     </>
   );
