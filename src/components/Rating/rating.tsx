@@ -33,7 +33,7 @@ function Rating() {
             onClick={() => handleClick(index)}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
-            className={index <= (rating || hover) ? "active" : "passive"}
+            className={index <= (hover || rating) ? "active" : "passive"}
           >
             <FaStar />
           </span>
