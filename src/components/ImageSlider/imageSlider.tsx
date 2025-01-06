@@ -12,9 +12,23 @@ const IMAGES = [img1, img2, img3, img4, img5, img6];
 function ImageSilder() {
   const [currentImage, setCurrentImage] = useState(0);
 
-  function showPreviousImage() {}
+  function showPreviousImage() {
+    setCurrentImage((index) => {
+      if (index === 0) {
+        return IMAGES.length - 1;
+      }
+      return index - 1;
+    });
+  }
 
-  function showNextImage() {}
+  function showNextImage() {
+    setCurrentImage((index) => {
+      if (index === IMAGES.length - 1) {
+        return 0;
+      }
+      return index + 1;
+    });
+  }
   return (
     <>
       <img src={IMAGES[currentImage]} style={{ width: "30%", height: "30%" }} />
