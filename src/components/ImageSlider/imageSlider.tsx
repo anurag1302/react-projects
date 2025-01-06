@@ -13,21 +13,43 @@ function ImageSilder() {
   const [currentImage, setCurrentImage] = useState(0);
 
   function showPreviousImage() {
-    setCurrentImage((index) => {
-      if (index === 0) {
-        return IMAGES.length - 1;
-      }
-      return index - 1;
-    });
+    //The commented code is also fine, it takes in the form of previous state of the useState
+    //Callback update: Pass a function to setState. This function receives the previous state as its argument.
+    //setState((previousState) => newValue)
+
+    // setCurrentImage((index) => {
+    //   if (index === 0) {
+    //     return IMAGES.length - 1;
+    //   }
+    //   return index - 1;
+    // });
+    let previousIndex = 0;
+    if (currentImage === 0) {
+      previousIndex = IMAGES.length - 1;
+    } else {
+      previousIndex = currentImage - 1;
+    }
+    setCurrentImage(previousIndex);
   }
 
   function showNextImage() {
-    setCurrentImage((index) => {
-      if (index === IMAGES.length - 1) {
-        return 0;
-      }
-      return index + 1;
-    });
+    //The commented code is also fine, it takes in the form of previous state of the useState
+    //Callback update: Pass a function to setState. This function receives the previous state as its argument.
+    //setState((previousState) => newValue)
+
+    // setCurrentImage((index) => {
+    //   if (index === IMAGES.length - 1) {
+    //     return 0;
+    //   }
+    //   return index + 1;
+    // });
+    let nextIndex = 0;
+    if (currentImage === IMAGES.length - 1) {
+      nextIndex = 0;
+    } else {
+      nextIndex = currentImage + 1;
+    }
+    setCurrentImage(nextIndex);
   }
   return (
     <>
