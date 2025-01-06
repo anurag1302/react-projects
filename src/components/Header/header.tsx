@@ -9,6 +9,7 @@ function Header() {
         <Link to="/accordian">Accordian</Link>
         <Link to="/color-picker">Color Picker</Link>
         <Link to="/rating">Star Rating</Link>
+        <Link to="/image-slider">Image Slider</Link>
       </div>
     </>
   );
