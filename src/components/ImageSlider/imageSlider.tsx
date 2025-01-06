@@ -32,22 +32,24 @@ function ImageSilder() {
   return (
     <>
       <img src={IMAGES[currentImage]} style={{ width: "30%", height: "30%" }} />
-      <button
-        onClick={showPreviousImage}
-        style={{
-          cursor: "pointer",
-          borderRadius: "2px",
-          fontSize: "20px",
-        }}
-      >
-        Previous
-      </button>
-      <button
-        onClick={showNextImage}
-        style={{ fontSize: "20px", cursor: "pointer", borderRadius: "2px" }}
-      >
-        Next
-      </button>
+      <div>
+        <button
+          onClick={showPreviousImage}
+          style={{
+            cursor: "pointer",
+            borderRadius: "2px",
+            fontSize: "20px",
+          }}
+        >
+          Previous
+        </button>
+        <button
+          onClick={showNextImage}
+          style={{ fontSize: "20px", cursor: "pointer", borderRadius: "2px" }}
+        >
+          Next
+        </button>
+      </div>
     </>
   );
 }
